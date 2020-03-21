@@ -1,13 +1,17 @@
 ---
 templateKey: index-page
-title: The Preferred Choice for Your Security Needs
+title: Promoting A Youth-Centric Agenda & Democratic Reform
 image: /img/home-jumbotron.jpg
 heading: Great coffee with a conscience
-subheading: Choose AMG Armourguards for your business today because we awesome af
+subheading: Pemerkasaan demokrasi bermula dengan anak muda. We are a non-partisan platform that’s building a movement of champions for democracy.
 mainpitch:
-  title: Services for Your Peace of Mind
+  title: Build the movement of champions for democracy. Starting from youths.
   description: >
-    This subtitle would briefly describe why we are making the above statement and segue to the list of services
+    We sell green and roasted coffee beans that are sourced directly
+            from independent farmers and farm cooperatives. We’re proud to offer
+            a variety of coffee beans grown with great care for the environment
+            and local communities. Check our post or contact us directly for
+            current availability.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,

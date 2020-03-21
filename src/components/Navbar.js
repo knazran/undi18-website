@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
-import Button from './Button';
+import logo from '../img/undi18-logo.png'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -36,25 +35,25 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <header className="top-0 bg-white shadow">
-    <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 lg:px-8">
+    <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 lg:px-16">
       <div className="flex items-center text-2xl">
-        {/* <div className="w-12 mr-3">
-          <LogoIcon />
-        </div> */}
-        Lander
+        <div className="w-40 mr-3">
+          <img src={logo} alt="Undi18" />
+        </div>
+        
       </div>
       <div className="flex mt-4 sm:mt-0 sm:px-4">
         <Link className="px-4" href="#features">
-          Features
+          About Us
         </Link>
         <Link className="px-4" href="#services">
-          Services
+          Campaigns
         </Link>
         <Link className="px-4" href="#stats">
-          Stats
+          Events
         </Link>
         <Link className="px-4" href="#testimonials">
-          Testimonials
+          Media & Partners
         </Link>
       </div>
       {/* <div className="hidden md:block">
