@@ -7,35 +7,36 @@ subheading: Pemerkasaan demokrasi bermula dengan anak muda. We are a non-partisa
 mainpitch:
   title: Build the movement of champions for democracy. Starting from youths.
   description: >
-    We sell green and roasted coffee beans that are sourced directly
-            from independent farmers and farm cooperatives. We’re proud to offer
-            a variety of coffee beans grown with great care for the environment
-            and local communities. Check our post or contact us directly for
-            current availability.
+    We are a non-partisan organization that actively engages with ploticians on all sides of the political divide in order to promote a youth-centric agenda and democratic reform.
+    
+    We started off as a student movement, under the umbrella of the Malaysia Students' Global Alliance, which gives us access to numerous Malaysian student/youth organization across the world and throughout Malaysia.
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
 features:
-  - icon: /img/coffee.png
-    title_text: Static Guards
+  - image: /img/saksama.png
+    title_text: Undi Saksama
     subtitle_text: >
-      An enim nullam tempor gravida donec enim ipsum blandit porta
-      justo integer odio velna vitae auctor integer.An enim nullam
-      tempor gravida donec enim ipsum blandit porta
-  - icon: /img/coffee-gear.png
-    title_text: Asset Protection
+      Don't worry, we’re here to help. You can schedule a custom
+                  1-on-1 consultation with our baristas to learn anything you
+                  want to know about coffee roasting and brewing. Email us or
+                  call the store for details.
+  - image: /img/111initiative.jpeg
+    title_text: The 111 Initiative
     subtitle_text: >
-      An enim nullam tempor gravida donec enim ipsum blandit porta
-      justo integer odio velna vitae auctor integer.An enim nullam
-      tempor gravida donec enim ipsum blandit porta
-  - icon: /img/tutorials.png
-    title_text: Incident Response
+      Don't worry, we’re here to help. You can schedule a custom
+                  1-on-1 consultation with our baristas to learn anything you
+                  want to know about coffee roasting and brewing. Email us or
+                  call the store for details.
+  - image: /img/myhutan.jpeg
+    title_text: MyHutan
     subtitle_text: >
-      An enim nullam tempor gravida donec enim ipsum blandit porta
-      justo integer odio velna vitae auctor integer.An enim nullam
-      tempor gravida donec enim ipsum blandit porta
+      Don't worry, we’re here to help. You can schedule a custom
+                  1-on-1 consultation with our baristas to learn anything you
+                  want to know about coffee roasting and brewing. Email us or
+                  call the store for details.
 intro:
   blurbs:
     - image: /img/coffee.png

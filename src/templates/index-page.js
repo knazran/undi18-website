@@ -2,13 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import myHutan from "../img/myhutan.jpeg";
-import initiative111 from "../img/111initiative.jpeg";
-import undiSaksama from "../img/saksama.png";
-
+// Components
 import Layout from "../components/Layout";
-import FeatureList from "../components/Features";
+import CampaignCardList from "../components/CampaignCard";
 import Button from "../components/Button";
+import Programmes from "../components/Programmes";
 
 export const IndexPageTemplate = ({
   image,
@@ -44,11 +42,11 @@ export const IndexPageTemplate = ({
       </div>
     </section>
 
-    {/* Features / Services */}
+    {/* Description */}
     <section id="features">
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
-        <div className="my-6 w-2/3">
-          <h3 className="text-2xl font-semibold tracking-wider py-2">
+        <div className="my-6 w-1/2">
+          <h3 className="text-4xl font-semibold tracking-wider py-2">
             {mainpitch.title}
           </h3>
           <p className="text-md mt-2 leading-relaxed font-light">
@@ -56,7 +54,7 @@ export const IndexPageTemplate = ({
           </p>
         </div>
 
-        <div className="my-6 w-1/3 flex-grow-0">
+        <div className="my-6 w-1/2 flex-grow-0">
           <img
             className="m-0 ml-6  lg:mr-4 rounded-lg object-center lg:object-fill h-0 lg:h-full"
             src="https://picsum.photos/800/300"
@@ -65,98 +63,102 @@ export const IndexPageTemplate = ({
       </div>
     </section>
 
+    {/* Campaigns */}
     <section id="campaigns">
-      <div className="container mx-auto px-4 py-4 lg:px-8 lg:flex">
+      <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-4 w-full">
-          <h3 className="text-2xl font-semibold tracking-wider my-6">
+          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
+          <h3 className="text-2xl font-semibold tracking-wider mb-6">
             See Our Campaigns
           </h3>
-          <div className="flex justify-start ">
-            <div className="w-1/3">
-              <div className="mr-6 border rounded-lg shadow-md">
-                <div className="">
-                  <img
-                    className="m-0 rounded-t object-center lg:object-fill lg:w-full"
-                    src={undiSaksama}
-                  />
-                </div>
-                <h3 className="text-lg font-normal text-black tracking-wider my-4 px-4">
-                  Undi Saksama
-                </h3>
-                <p className="text-sm mt-2 leading-relaxed font-light text-gray-600 px-4 mb-4">
-                  Don't worry, we’re here to help. You can schedule a custom
-                  1-on-1 consultation with our baristas to learn anything you
-                  want to know about coffee roasting and brewing. Email us or
-                  call the store for details.
-                </p>
-                <div className="flex justify-end p-4">
-                  <a
-                    class="align-right font-bold text-md text-blue-500 hover:text-blue-800"
-                    href="#"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="w-1/3">
-              <div className="mr-6 border rounded-lg shadow-md">
-                <div className="">
-                  <img
-                    className="m-0 rounded-t object-center lg:object-fill lg:w-full"
-                    src={initiative111}
-                  />
-                </div>
-                <h3 className="text-lg font-normal text-black tracking-wider my-4 px-4">
-                  The 111 Initiative
-                </h3>
-                <p className="text-sm mt-2 leading-relaxed font-light text-gray-600 px-4 mb-4">
-                  Don't worry, we’re here to help. You can schedule a custom
-                  1-on-1 consultation with our baristas to learn anything you
-                  want to know about coffee roasting and brewing. Email us or
-                  call the store for details.
-                </p>
-                <div className="flex justify-end p-4">
-                  <a
-                    class="align-right font-bold text-md text-blue-500 hover:text-blue-800"
-                    href="#"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="w-1/3">
-              <div className="mr-6 border rounded-lg shadow-md">
-                <div className="">
-                  <img
-                    className="m-0 rounded-t object-center lg:object-fill lg:w-full"
-                    src={myHutan}
-                  />
-                </div>
-                <h3 className="text-lg font-normal text-black tracking-wider my-4 px-4">
-                  MyHutan
-                </h3>
-                <p className="text-sm mt-2 leading-relaxed font-light text-gray-600 px-4 mb-4">
-                  Don't worry, we’re here to help. You can schedule a custom
-                  1-on-1 consultation with our baristas to learn anything you
-                  want to know about coffee roasting and brewing. Email us or
-                  call the store for details.
-                </p>
-                <div className="flex justify-end p-4">
-                  <a
-                    class="align-right font-bold text-md text-blue-500 hover:text-blue-800"
-                    href="#"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
+          <CampaignCardList featureItems={features} />
+        </div>
+      </div>
+
+      <div className="flex justify-center m-2 ">
+        <a
+          class="align-right font-bold border border-blue-500 p-2 text-md text-blue-500 hover:text-blue-800"
+          href="#"
+        >
+          See All Campaigns →
+        </a>
+      </div>
+    </section>
+
+    {/* Programmes */}
+    <section id="programmes">
+      <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
+        <div className="my-6 w-2/5">
+          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
+          <h3 className="text-2xl font-semibold tracking-wider">
+            Impact Through Engagement and Education
+          </h3>
+          <p className="text-lg leading-relaxed font-light text-gray-600 mb-4">
+            We started off as a student movement, under the umbrella of the
+            Malaysia Students' Global Alliance.
+          </p>
+        </div>
+
+        <div className="my-6 w-3/5 pl-24 pt-3 flex-grow-0">
+          {/* <h3 className="text-2xl font-semibold tracking-wider ">
+            What We Do
+          </h3> */}
+          <p className="text-lg leading-relaxed font-light text-gray-600 mb-4">
+            Our Programmes focuses on engagement and education bla bla bla bla.
+            We mainly run the following:
+          </p>
+          <Programmes></Programmes>
+          <div className="flex justify-end m-2 ">
+            <a
+              class="align-right font-bold p-2 text-md text-blue-500 hover:text-blue-800"
+              href="#"
+            >
+              Learn More →
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+    {/* Events */}
+    <section id="events">
+      <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
+        <div className="my-6 w-full">
+          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
+          <h3 className="text-4xl font-semibold tracking-wider">
+            Events
+          </h3>
+          
+        </div>
+      </div>
+    </section>
+
+    {/* Media */}
+    <section id="events">
+      <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
+        <div className="my-6 w-full">
+          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
+          <h3 className="text-4xl font-semibold tracking-wider">
+            Media Mentions
+          </h3>
+          
+        </div>
+      </div>
+    </section>
+
+    {/* Events */}
+    <section id="events">
+      <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
+        <div className="my-6 w-full">
+          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
+          <h3 className="text-4xl font-semibold tracking-wider">
+            Our Partners & Clients
+          </h3>
+          
+        </div>
+      </div>
+    </section>
+
   </div>
 );
 
@@ -242,6 +244,13 @@ export const pageQuery = graphql`
           quote
         }
         features {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 480, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           title_text
           subtitle_text
         }
