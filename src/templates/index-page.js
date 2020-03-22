@@ -7,17 +7,16 @@ import Layout from "../components/Layout";
 import CampaignCardList from "../components/CampaignCard";
 import Button from "../components/Button";
 import Programmes from "../components/Programmes";
+import Events from "../components/Events";
 
 export const IndexPageTemplate = ({
   image,
-  title,
   heading,
   subheading,
   mainpitch,
-  description,
-  testimonial,
-  intro,
-  features
+  campaigns,
+  programmes,
+  events
 }) => (
   <div>
     <section
@@ -27,7 +26,7 @@ export const IndexPageTemplate = ({
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="flex flex-col justify-between text-center lg:text-left lg:w-3/5 mr-2">
           <h1 className="text-4xl font-bold tracking-wider text-white">
-            {title}
+            {heading}
           </h1>
           <p className="text-xl mt-6 font-light text-gray-200">{subheading}</p>
           <div>
@@ -71,7 +70,7 @@ export const IndexPageTemplate = ({
           <h3 className="text-2xl font-semibold tracking-wider mb-6">
             See Our Campaigns
           </h3>
-          <CampaignCardList featureItems={features} />
+          <CampaignCardList campaignItems={campaigns} />
         </div>
       </div>
 
@@ -87,37 +86,7 @@ export const IndexPageTemplate = ({
 
     {/* Programmes */}
     <section id="programmes">
-      <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
-        <div className="my-6 w-2/5">
-          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-2xl font-semibold tracking-wider">
-            Impact Through Engagement and Education
-          </h3>
-          <p className="text-lg leading-relaxed font-light text-gray-600 mb-4">
-            We started off as a student movement, under the umbrella of the
-            Malaysia Students' Global Alliance.
-          </p>
-        </div>
-
-        <div className="my-6 w-3/5 pl-24 pt-3 flex-grow-0">
-          {/* <h3 className="text-2xl font-semibold tracking-wider ">
-            What We Do
-          </h3> */}
-          <p className="text-lg leading-relaxed font-light text-gray-600 mb-4">
-            Our Programmes focuses on engagement and education bla bla bla bla.
-            We mainly run the following:
-          </p>
-          <Programmes></Programmes>
-          <div className="flex justify-end m-2 ">
-            <a
-              class="align-right font-bold p-2 text-md text-blue-500 hover:text-blue-800"
-              href="#"
-            >
-              Learn More →
-            </a>
-          </div>
-        </div>
-      </div>
+      <Programmes programmeItem={programmes}></Programmes>
     </section>
 
     {/* Events */}
@@ -125,10 +94,12 @@ export const IndexPageTemplate = ({
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
           <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-4xl font-semibold tracking-wider">
-            Events
-          </h3>
-          
+          <h3 className="text-3xl font-semibold tracking-wider">Events</h3>
+
+          {/* Event List */}
+          <div className="flex justify-start mt-8">
+            <Events eventItems={events}/>
+          </div>
         </div>
       </div>
     </section>
@@ -138,10 +109,9 @@ export const IndexPageTemplate = ({
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
           <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-4xl font-semibold tracking-wider">
+          <h3 className="text-3xl font-semibold tracking-wider">
             Media Mentions
           </h3>
-          
         </div>
       </div>
     </section>
@@ -151,29 +121,23 @@ export const IndexPageTemplate = ({
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
           <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-4xl font-semibold tracking-wider">
+          <h3 className="text-3xl font-semibold tracking-wider">
             Our Partners & Clients
           </h3>
-          
         </div>
       </div>
     </section>
-
   </div>
 );
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  testimonials: PropTypes.array,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  }),
-  features: PropTypes.array
+  campaigns: PropTypes.array,
+  programmes: PropTypes.array,
+  events: PropTypes.array
 };
 
 const IndexPage = ({ data }) => {
@@ -183,14 +147,12 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
-        title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        testimonials={frontmatter.testimonials}
-        intro={frontmatter.intro}
-        features={frontmatter.features}
+        campaigns={frontmatter.campaigns}
+        programmes={frontmatter.programmes}
+        events={frontmatter.events}
       />
     </Layout>
   );
@@ -210,7 +172,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
@@ -224,26 +185,7 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-        testimonials {
-          author
-          quote
-        }
-        features {
+        campaigns {
           image {
             childImageSharp {
               fluid(maxWidth: 480, quality: 100) {
@@ -253,6 +195,24 @@ export const pageQuery = graphql`
           }
           title_text
           subtitle_text
+        }
+        programmes {
+          title
+          subtitle
+          section_intro_text
+          programme_list {
+            title_text
+            subtitle_text
+          }
+        }
+        events {
+          event_name
+          image
+          url
+          date
+          venue
+          time
+          day
         }
       }
     }

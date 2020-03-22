@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
 
-const CampaignCardList = ({ featureItems }) => (
+const CampaignCardList = ({ campaignItems }) => (
   <div className="flex justify-start ">
-    {featureItems.map(item => (
+    {campaignItems.map(item => (
       <div className="w-1/3">
         <div className="mr-6 border rounded-lg shadow-md">
           <div className="">
