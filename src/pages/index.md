@@ -2,14 +2,14 @@
 templateKey: index-page
 title: Promoting A Youth-Centric Agenda & Democratic Reform
 image: /img/home-jumbotron.jpg
-heading: Promoting A Youth-Centric Agenda & Democratic Reform
+heading: Impacted 8 Million Youths and counting
 subheading: Pemerkasaan demokrasi bermula dengan anak muda. We are a non-partisan platform that’s building a movement of champions for democracy.
 mainpitch:
   title: Build the movement of champions for democracy. Starting from youths.
   description: >
-    We are a non-partisan organization that actively engages with ploticians on all sides of the political divide in order to promote a youth-centric agenda and democratic reform.
-    
-    We started off as a student movement, under the umbrella of the Malaysia Students' Global Alliance, which gives us access to numerous Malaysian student/youth organization across the world and throughout Malaysia.
+    Promoting a youth-centric agenda and democratic reforms. Undi18 aims to bridge the gap between
+    politicians, policymakers, and youth. We help Malaysians read and understand policies beyond
+    politics.
 campaigns:
   - image: /img/saksama.png
     title_text: Undi Saksama
@@ -60,7 +60,7 @@ programmes:
                     call the store for details.
 
 events:
-  - event_name: "Seeds of Democracy"
+  - event_name: "Seeds for Democracy"
     image: ''
     url: ''
     date: "MAR 22"
