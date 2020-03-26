@@ -18,21 +18,21 @@ const Programmes = ({ programmeItem }) => (
       </p>
 
       {programmeItem.programme_list.map(programme_list => (
-          <div className="flex flex-col lg:flex-row lg:justify-between items-center ">
+          <div className="flex flex-col lg:flex-row lg:justify-start items-center ">
           <div className="w-56 lg:w-1/5 xl:1/6 lg:mr-8">
             <img className="" src="https://picsum.photos/800/600" />
           </div>
   
           <div className="w-full lg: w-4/5 xl:5/6 py-2 self-start ">
-            <p className="text-md text-black text-center font-normal lg:text-left  leading-none mb-2 ">
+            <p className="text-lg text-black text-center font-normal lg:text-left  leading-none mb-2 ">
               {programme_list.title_text}
             </p>
-            <p className="text-md lg:text-sm font-light text-gray-600 text-center lg:text-left">
+            <p className="text-md font-light text-gray-600 text-center lg:text-left">
             {programme_list.subtitle_text}
             </p>
           </div>
         </div>
-      ))};
+      ))}
 
       <div className="flex justify-end m-2 ">
         <a
