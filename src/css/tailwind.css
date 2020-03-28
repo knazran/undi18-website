@@ -7,6 +7,27 @@ a:hover {
   @apply text-primary-darker;
 }
 
+/* h1 {
+  @apply text-2xl;
+  @apply font-bold;
+  @apply py-2;
+}
+h2 {
+  @apply text-xl;
+  @apply font-bold;
+}
+h3 {
+  @apply text-lg;
+  @apply font-bold;
+  @apply py-2;
+}
+
+h4 {
+  @apply text-lg;
+  @apply font-semibold;
+} */
+
+
 @tailwind components;
 
 @tailwind utilities;

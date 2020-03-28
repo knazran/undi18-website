@@ -157,7 +157,7 @@ export const IndexPageTemplate = ({
     <section id="events">
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
-          <div class="w-20 h-1 bg-red-800  self-start mb-2"></div>
+          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
           <h3 className="text-2xl font-semibold tracking-wider">
             Upcoming Events
           </h3>

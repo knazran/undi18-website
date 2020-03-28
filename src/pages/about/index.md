@@ -3,17 +3,30 @@ templateKey: 'about-page'
 path: /about
 title: About our values
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
-
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
-
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
-
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+Undi18 is a Malaysian youth movement that successfully advocated for the amendment of Article 119(1) of the Federal Constitution to reduce the minimum voting age in Malaysia from 21 to 18
+years old. 
+<br>
+<br>
+We started off as a student movement in 2016, under the umbrella of the Malaysian Students’
+Global Alliance. This gave us access to numerous Malaysian student/youth organizations across the
+world and throughout Malaysia. We officially launched with a memorandum to Datuk Seri Najib Tun
+Razak in April 2017. 
+<br>
+<br>
+Throughout the years, we have organized numerous town halls, forums and public engagements to
+raise awareness on youth democratic representation and lowering the voting age. We have also
+engaged with politicians from multiple sides of the political divide, where we presented our case for
+the lowering of the voting age in Malaysia. We believe that youth empowerment transcends political
+lines. 
+<br>
+<br>
+In July 2019, with the support of YB Syed Saddiq Syed Abdul Rahman (the former Minister of Youth
+and Sports), we managed to advocate for a historic Constitutional Amendment to lower the voting
+age in Malaysia. It was the first time in history where a Constitutional Amendment received 100% of
+votes in the Upper and Lower Houses of Parliament. 
+<br>
+<br>
+Undi18 (Persatuan Pengundi Muda) is a registered National Organization under the Malaysian
+Registry of Societies with a registration number of PPM-008-14-27092018. We are a social enterprise
+focusing on voter education and youth public policy engagement. 
