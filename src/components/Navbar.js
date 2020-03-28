@@ -42,17 +42,20 @@ const Navbar = class extends React.Component {
               </Link>
             </div>
           </div>
-          <div className="flex mt-4 sm:mt-0 sm:px-4">
-            <Link className="px-4" to="/about/">
+          <div className="flex mt-4 sm:mt-0 sm:px-4 ">
+            <Link className="px-4 text-red-800 hover:text-red-900" to="/about/">
               About Us
             </Link>
-            <Link className="px-4" href="#services">
+            <Link className="px-4 text-red-800 hover:text-red-900" href="#services">
+              Programmes
+            </Link>
+            <Link className="px-4 text-red-800 hover:text-red-900" href="#services">
               Campaigns
             </Link>
-            <Link className="px-4" href="#stats">
+            <Link className="px-4 text-red-800 hover:text-red-900" href="#stats">
               Events
             </Link>
-            <Link className="px-4" href="#testimonials">
+            <Link className="px-4 text-red-800 hover:text-red-900" href="#testimonials">
               Media & Partners
             </Link>
           </div>
