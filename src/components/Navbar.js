@@ -66,25 +66,25 @@ const Navbar = class extends React.Component {
             </Link>
             <Link
               className="px-0 lg:px-4 text-red-800 hover:text-red-900"
-              href="#services"
+              to="/about/"
             >
               Programmes
             </Link>
             <Link
               className="px-0 lg:px-4 text-red-800 hover:text-red-900"
-              href="#services"
+              to="/about/"
             >
               Campaigns
             </Link>
             <Link
               className="px-0 lg:px-4 text-red-800 hover:text-red-900"
-              href="#stats"
+              to="/about/"
             >
               Events
             </Link>
             <Link
               className="px-0 lg:px-4 text-red-800 hover:text-red-900"
-              href="#testimonials"
+              to="/about/"
             >
               Media & Partners
             </Link>

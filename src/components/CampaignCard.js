@@ -6,7 +6,7 @@ const CampaignCardList = ({ campaignItems }) => (
   <div className="lg:flex justify-start ">
     {campaignItems.map(item => (
       <div className="w-full mb-6 lg:mb-0 lg:w-1/3">
-        <div className="mx-6 border rounded-lg shadow-md">
+        <div className="mx-4 lg:mx-6 border rounded-lg shadow-md">
           <div className="w-full">
             <Img className="rounded-t" fluid={item.image.childImageSharp.fluid} />
           </div>
