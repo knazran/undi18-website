@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link} from "gatsby";
 
 // Components
 import Layout from "../components/Layout";
@@ -56,12 +56,13 @@ export const IndexPageTemplate = ({
           <p className="text-md mt-2 mb-6 leading-relaxed font-light">
             {mainpitch.description}
           </p>
-          <a
+          {/* <a
             class="font-bold underline text-md text-red-700 hover:text-red-800"
             href="#"
           >
             Read Our Story
-          </a>
+          </a> */}
+          <Link class="font-bold underline text-md text-red-700 hover:text-red-800" to="/about/">Read Our Story</Link>
         </div>
         <div className="my-6 w-1/2 flex-grow-0">
           <img
