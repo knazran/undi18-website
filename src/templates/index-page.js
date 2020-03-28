@@ -10,6 +10,7 @@ import Programmes from "../components/Programmes";
 import Events from "../components/Events";
 
 import logo from "../img/undi18-logo2.png";
+import partner from "../img/partners.jpeg";
 
 export const IndexPageTemplate = ({
   image,
@@ -226,6 +227,9 @@ export const IndexPageTemplate = ({
           <h3 className="text-2xl font-semibold tracking-wider">
             Our Partners & Clients
           </h3>
+          <div className="flex flex-col justify-center">
+            <img src={partner} alt="Partners" />
+          </div>
         </div>
       </div>
     </section>
