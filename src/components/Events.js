@@ -11,7 +11,7 @@ const EventList = ({ eventItems }) => (
             {/* <Img fluid={item.image.childImageSharp.fluid} /> */}
             <img
               className="m-0 rounded-lg rounded-b-none object-center lg:object-fill h-0 lg:h-full"
-              src="https://picsum.photos/400/200"
+              src="https://picsum.photos/400/150"
             />
           </div>
           <div className="flex my-4 ">

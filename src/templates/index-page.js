@@ -9,13 +9,14 @@ import Button from "../components/Button";
 import Programmes from "../components/Programmes";
 import Events from "../components/Events";
 
-import logo from "../img/undi18-logo.png";
+import logo from "../img/undi18-logo2.png";
 
 export const IndexPageTemplate = ({
   image,
   heading,
   subheading,
   mainpitch,
+  whatwedo,
   campaigns,
   programmes,
   events
@@ -75,87 +76,37 @@ export const IndexPageTemplate = ({
         <div className="my-4 w-full">
           <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
           <h3 className="text-2xl font-semibold tracking-wider">
-            What We Do: Impacting Through the Youths
+            {whatwedo.title}
           </h3>
           <p className="text-lg leading-relaxed font-light text-gray-600 mb-8">
-            Through the pillars of Education, Advocacy, and Awareness
+            {whatwedo.subtitle}
           </p>
           <div className="flex justify-start ">
-            <div className="w-1/3">
-              <div className="mr-10">
-                <p className="text-red-800 text-md mb-4 font-semibold tracking-wide">
-                  EDUCATION
-                </p>
-                <img
-                  className="object-scale-down"
-                  src="https://picsum.photos/600/400"
-                />
-                <h3 className="text-lg mt-4 font-semibold ">
-                  Seeds For Democracy
-                </h3>
-                <p className="text-md mt-2 leading-relaxed font-light text-gray-600 mb-8">
-                  Our flagship education workshop, Seeds for Democracy is
-                  something something something more things walking talking
-                  things and more stuff ya know for youth
-                </p>
-                <a
-                  class="align-right font-bold text-sm text-red-700 hover:text-red-800"
-                  href="#"
-                >
-                  Learn More →
-                </a>
+            {whatwedo.pillars.map(pillar => (
+              <div className="w-1/3">
+                <div className="mr-10">
+                  <p className="text-red-800 text-md mb-4 font-semibold tracking-wide">
+                    {pillar.heading}
+                  </p>
+                  <img
+                    className="object-scale-down"
+                    src="https://picsum.photos/600/400"
+                  />
+                  <h3 className="text-lg mt-4 font-semibold ">
+                    {pillar.title}
+                  </h3>
+                  <p className="text-md mt-2 leading-relaxed font-light text-gray-600 mb-8">
+                    {pillar.subtitle}
+                  </p>
+                  <a
+                    class="align-right font-bold text-sm text-red-700 hover:text-red-800"
+                    href="#"
+                  >
+                    Learn More →
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="w-1/3">
-              <div className="mr-10">
-                <p className="text-red-800 text-md mb-4 font-semibold tracking-wide">
-                  ADVOCACY
-                </p>
-                <img
-                  className="object-scale-down"
-                  src="https://picsum.photos/600/400"
-                />
-                <h3 className="text-lg mt-4 font-semibold ">
-                  Campaigns for Change
-                </h3>
-                <p className="text-md mt-2 leading-relaxed font-light text-gray-600 mb-8">
-                  Our flagship education workshop, Seeds for Democracy is
-                  something something something more things walking talking
-                  things and more stuff ya know for youth
-                </p>
-                <a
-                  class="align-right font-bold text-sm text-red-700 hover:text-red-800"
-                  href="#"
-                >
-                  Learn More →
-                </a>
-              </div>
-            </div>
-            <div className="w-1/3">
-              <div className="mr-10">
-                <p className="text-red-800 text-md mb-4 font-semibold tracking-wide">
-                  AWARENESS
-                </p>
-                <img
-                  className="object-scale-down"
-                  src="https://picsum.photos/600/400"
-                />
-                <h3 className="text-lg mt-4 font-semibold ">
-                  Voter Education Starts Here
-                </h3>
-                <p className="text-md mt-2 leading-relaxed font-light text-gray-600 mb-8">
-                  Our flagship education workshop, Seeds for Democracy is
-                  something something something more things walking talking
-                  things and more stuff ya know for youth
-                </p>
-                <a
-                  class="align-right font-bold text-sm text-red-700 hover:text-red-800"
-                  href="#"
-                >
-                  Learn More →
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -167,24 +118,20 @@ export const IndexPageTemplate = ({
     </section> */}
 
     {/* Campaigns */}
-    <div className="mt-12 bg-red-900 flex flex-col justify-center">
+    <div className="mt-12 py-6 bg-black flex flex-col justify-center">
       <div className="w-56 self-center mr-3">
         <img src={logo} alt="Undi18" />
       </div>
       <div>
-      <h3 className="text-3xl text-center pb-8 text-white font-semibold tracking-wider">
+        <h3 className="text-3xl text-center text-white font-semibold tracking-wider">
           Campaigns for Change
         </h3>
       </div>
     </div>
     <section id="campaigns">
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
-        <div className="my-4 w-full">
-          {/* <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-2xl font-semibold tracking-wider">
-            Campaigns for Change
-          </h3> */}
-          <p className="text-lg leading-relaxed font-light text-gray-600 mb-8">
+        <div className="my-4  w-full ">
+          <p className="text-lg lg:text-xl text-center leading-relaxed font-light text-gray-700 mb-8">
             Join us in affecting change. We run campaigns because nak harap
             orang atas memang tak jalan
           </p>
@@ -194,7 +141,7 @@ export const IndexPageTemplate = ({
 
       <div className="flex justify-center m-2 ">
         <a
-          class="align-right font-bold border border-blue-500 p-2 text-md text-blue-500 hover:text-blue-800"
+          class="align-right font-bold border border-red-700 p-2 text-md text-red-700 hover:text-red-800"
           href="#"
         >
           See All Campaigns →
@@ -207,13 +154,23 @@ export const IndexPageTemplate = ({
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
           <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-3xl font-semibold tracking-wider">Events</h3>
+          <h3 className="text-2xl font-semibold tracking-wider">
+            Upcoming Events
+          </h3>
 
           {/* Event List */}
           <div className="flex justify-start mt-8">
             <Events eventItems={events} />
           </div>
         </div>
+      </div>
+      <div className="flex justify-center m-2 ">
+        <a
+          class="align-right font-bold border border-red-700 p-2 text-md text-red-700 hover:text-red-800"
+          href="#"
+        >
+          See Past Events →
+        </a>
       </div>
     </section>
 
@@ -222,7 +179,7 @@ export const IndexPageTemplate = ({
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
           <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-3xl font-semibold tracking-wider">
+          <h3 className="text-2xl font-semibold tracking-wider">
             Media Mentions
           </h3>
         </div>
@@ -234,7 +191,7 @@ export const IndexPageTemplate = ({
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
           <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
-          <h3 className="text-3xl font-semibold tracking-wider">
+          <h3 className="text-2xl font-semibold tracking-wider">
             Our Partners & Clients
           </h3>
         </div>
@@ -248,6 +205,7 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
+  whatwedo: PropTypes.object,
   campaigns: PropTypes.array,
   programmes: PropTypes.array,
   events: PropTypes.array
@@ -263,6 +221,7 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
+        whatwedo={frontmatter.whatwedo}
         campaigns={frontmatter.campaigns}
         programmes={frontmatter.programmes}
         events={frontmatter.events}
@@ -297,6 +256,15 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
+        }
+        whatwedo {
+          title
+          subtitle
+          pillars {
+            heading
+            title
+            subtitle
+          }
         }
         campaigns {
           image {

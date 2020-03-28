@@ -10,28 +10,33 @@ mainpitch:
     Promoting a youth-centric agenda and democratic reforms. Undi18 aims to bridge the gap between
     politicians, policymakers, and youth. We help Malaysians read and understand policies beyond
     politics.
+whatwedo:
+  title: > 
+        What We Do: Impacting Through the Youths
+  subtitle: Through the pillars of Education, Advocacy, and Awareness
+  pillars:
+    - heading: EDUCATION
+      title: Seeds For Democracy
+      subtitle: Our flagship education workshop, Seeds for Democracy is something something something more things walking talking things and more stuff ya know for youth
+    - heading: ADVOCACY
+      title: Campaigns for Change
+      subtitle: Our flagship education workshop, Seeds for Democracy is something something something more things walking talking things and more stuff ya know for youth
+    - heading: AWARENESS
+      title: Voter Education Starts Here
+      subtitle: Our flagship education workshop, Seeds for Democracy is something something something more things walking talking things and more stuff ya know for youth 
 campaigns:
   - image: /img/saksama.png
     title_text: Undi Saksama
     subtitle_text: >
-      Don't worry, we’re here to help. You can schedule a custom
-                  1-on-1 consultation with our baristas to learn anything you
-                  want to know about coffee roasting and brewing. Email us or
-                  call the store for details.
+      Brief pitch about the campaing. To inspire, generate interest, and make people out there hyped
   - image: /img/111initiative.jpeg
     title_text: The 111 Initiative
     subtitle_text: >
-      Don't worry, we’re here to help. You can schedule a custom
-                  1-on-1 consultation with our baristas to learn anything you
-                  want to know about coffee roasting and brewing. Email us or
-                  call the store for details.
+      Brief pitch about the campaing. To inspire, generate interest, and make people out there hyped
   - image: /img/myhutan.jpeg
     title_text: MyHutan
     subtitle_text: >
-      Don't worry, we’re here to help. You can schedule a custom
-                  1-on-1 consultation with our baristas to learn anything you
-                  want to know about coffee roasting and brewing. Email us or
-                  call the store for details.
+      Brief pitch about the campaing. To inspire, generate interest, and make people out there hyped
 programmes:
   title: "Impact Through Engagement and Education"
   subtitle: "We started off as a student movement, under the umbrella of the Malaysia Students' Global Alliance."
