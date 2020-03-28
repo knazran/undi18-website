@@ -6,9 +6,8 @@ const EventList = ({ eventItems }) => (
   <div className="flex items-stretch justify-start ">
     {eventItems.map(item => (
       <div className="lg:w-1/3 flex">
-        <div className="mr-6 border rounded-lg shadow-md self-stretch ">
+        <div className="mr-6 border rounded shadow-md self-stretch ">
           <div className="">
-            {/* <Img fluid={item.image.childImageSharp.fluid} /> */}
             <img
               className="m-0 rounded-lg rounded-b-none object-center lg:object-fill h-0 lg:h-full"
               src="https://picsum.photos/400/150"

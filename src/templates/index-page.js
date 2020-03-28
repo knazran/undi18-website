@@ -19,7 +19,8 @@ export const IndexPageTemplate = ({
   whatwedo,
   campaigns,
   programmes,
-  events
+  events,
+  media_mentions
 }) => (
   <div>
     <section
@@ -83,13 +84,14 @@ export const IndexPageTemplate = ({
           </p>
           <div className="flex justify-start ">
             {whatwedo.pillars.map(pillar => (
+              // What we do card
               <div className="w-1/3">
                 <div className="mr-10">
                   <p className="text-red-800 text-md mb-4 font-semibold tracking-wide">
                     {pillar.heading}
                   </p>
                   <img
-                    className="object-scale-down"
+                    className="object-scale-down rounded"
                     src="https://picsum.photos/600/400"
                   />
                   <h3 className="text-lg mt-4 font-semibold ">
@@ -153,7 +155,7 @@ export const IndexPageTemplate = ({
     <section id="events">
       <div className="container mx-auto px-4 py-4 lg:px-16 lg:flex">
         <div className="my-6 w-full">
-          <div class="w-20 h-1 bg-red-800 rounded-lg self-start mb-2"></div>
+          <div class="w-20 h-1 bg-red-800  self-start mb-2"></div>
           <h3 className="text-2xl font-semibold tracking-wider">
             Upcoming Events
           </h3>
@@ -182,6 +184,36 @@ export const IndexPageTemplate = ({
           <h3 className="text-2xl font-semibold tracking-wider">
             Media Mentions
           </h3>
+          <div class="lg:flex lg:flex-wrap mt-2">
+            {media_mentions.map(media => (
+              // Media Mention Card
+              <div class="w-1/2">
+                <div class="lg:flex border rounded shadow-md my-4 mr-6">
+                  <div class="lg:w-1/3">
+                    <img
+                      className="m-0 rounded rounded-r-none lg:object-fill h-0 lg:h-full"
+                      src="https://picsum.photos/400/150"
+                    />
+                  </div>
+                  <div className="lg:flex lg:flex-wrap lg:w-2/3 px-4 py-3">
+                    <div>
+                      <h4 className="text-sm leading-none tracking-tight font-semibold text-red-700 mb-2">
+                        {media.category}
+                      </h4>
+                      <h3 className="text-md tracking-wide leading-snug font-bold mb-4">
+                        {media.title}
+                      </h3>
+                    </div>
+                    <div className="self-end ">
+                      <p className="text-sm text-gray-700 tracking-tight">
+                        Read more at: {media.url}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -208,7 +240,8 @@ IndexPageTemplate.propTypes = {
   whatwedo: PropTypes.object,
   campaigns: PropTypes.array,
   programmes: PropTypes.array,
-  events: PropTypes.array
+  events: PropTypes.array,
+  media_mentions: PropTypes.array
 };
 
 const IndexPage = ({ data }) => {
@@ -225,6 +258,7 @@ const IndexPage = ({ data }) => {
         campaigns={frontmatter.campaigns}
         programmes={frontmatter.programmes}
         events={frontmatter.events}
+        media_mentions={frontmatter.media_mentions}
       />
     </Layout>
   );
@@ -294,6 +328,11 @@ export const pageQuery = graphql`
           venue
           time
           day
+        }
+        media_mentions {
+          title
+          url
+          category
         }
       }
     }

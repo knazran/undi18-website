@@ -86,4 +86,22 @@ events:
     venue: "Found8 KL Sentral"
     time: "8.30pm"
     day: "Wed"
+
+media_mentions:
+  - title: >
+      Seeds For Democracy - A workspace to educate more about our democratic system
+    url: www.awatni.com
+    category: News Article
+  - title: >
+      A TV Interview on Awani Where We say 'Ok Bumi'
+    url: www.awatni.com
+    category: TV Interview
+  - title: >
+      Breakfast Club on BFM
+    url: www.bfm.com
+    category: Radio Interview
+  - title: >
+      March with Us on Women's March
+    url: www.awatni.com
+    category: News Article
 ---

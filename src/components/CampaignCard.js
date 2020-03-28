@@ -8,7 +8,7 @@ const CampaignCardList = ({ campaignItems }) => (
       <div className="w-1/3">
         <div className="mx-6 border rounded-lg shadow-md">
           <div className="">
-            <Img fluid={item.image.childImageSharp.fluid} />
+            <Img className="rounded-t" fluid={item.image.childImageSharp.fluid} />
           </div>
           <h3 className="text-lg font-semibold text-black tracking-wider mt-4 px-4">
             {item.title_text}
