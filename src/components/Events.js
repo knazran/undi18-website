@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import Img from "gatsby-image";
 
 const EventList = ({ eventItems }) => (
-  <div className="flex items-stretch justify-start ">
+  <div className="lg:flex items-stretch justify-start ">
     {eventItems.map(item => (
       <div className="lg:w-1/3 flex">
-        <div className="mr-6 border rounded shadow-md self-stretch ">
+        <div className="mr-6 mb-6 lg:mb-0 border rounded shadow-md w-full lg:w-auto self-stretch ">
           <div className="">
             <img
               className="m-0 rounded-lg rounded-b-none object-center lg:object-fill h-0 lg:h-full"
@@ -26,7 +26,7 @@ const EventList = ({ eventItems }) => (
               <p className="text-sm leading-tight font-light text-gray-600 ">
                 {item.venue}
               </p>
-              <h3 className="text-lg mt-1 font-normal text-black tracking-wider ">
+              <h3 className="text-md lg:text-lg mt-1 font-normal text-black tracking-wider ">
                 {item.event_name}
               </h3>
             </div>
@@ -34,7 +34,7 @@ const EventList = ({ eventItems }) => (
 
           <div className="flex self-end justify-end p-4">
             <a
-              class="align-right font-bold text-md text-blue-500 hover:text-blue-800"
+              class="align-right font-bold text-sm lg:text-md text-blue-500 hover:text-blue-800"
               href="#"
             >
               More Details

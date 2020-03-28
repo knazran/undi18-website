@@ -7,8 +7,9 @@ const Navbar = class extends React.Component {
     super(props);
     this.state = {
       active: false,
-      navBarActiveClass: ""
+      navBarActiveClass: "hidden lg:block"
     };
+    
   }
 
   toggleHamburger = () => {
@@ -19,13 +20,14 @@ const Navbar = class extends React.Component {
       },
       // after state has been updated,
       () => {
+        console.log(this.state.active)
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
               navBarActiveClass: "is-active"
             })
           : this.setState({
-              navBarActiveClass: ""
+              navBarActiveClass: "hidden lg:block"
             });
       }
     );
@@ -34,34 +36,59 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <header className="top-0 bg-white shadow">
-        <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 lg:px-16">
-          <div className="flex items-center text-2xl">
-            <div className="w-40 mr-3">
+        <div className="container flex flex-wrap justify-between items-center mx-auto py-1 lg:px-16">
+          <div className="flex w-full justify-between lg:w-auto items-center text-2xl">
+            <div className="w-32 ml-3 lg:ml-0 lg:w-40 lg:mr-3">
               <Link to="/">
                 <img src={logo} alt="Undi18" />
               </Link>
             </div>
+            <div className="block lg:hidden">
+            <button
+              onClick={() => this.toggleHamburger()}
+              className="flex items-center mr-2 px-3 py-2 border rounded text-gray-500 border-gray-600"
+            >
+              <svg
+                className="fill-current h-3 w-3"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
           </div>
-          <div className="flex mt-4 sm:mt-0 sm:px-4 ">
-            <Link className="px-4 text-red-800 hover:text-red-900" to="/about/">
+          </div>
+          
+          <div className={`flex flex-col text-center sm:flex-row w-full lg:w-auto lg:text-left justify-center px-4  ${this.state.navBarActiveClass}`}>
+            <Link className="px-0 lg:px-4 text-red-800 hover:text-red-900" to="/about/">
               About Us
             </Link>
-            <Link className="px-4 text-red-800 hover:text-red-900" href="#services">
+            <Link
+              className="px-0 lg:px-4 text-red-800 hover:text-red-900"
+              href="#services"
+            >
               Programmes
             </Link>
-            <Link className="px-4 text-red-800 hover:text-red-900" href="#services">
+            <Link
+              className="px-0 lg:px-4 text-red-800 hover:text-red-900"
+              href="#services"
+            >
               Campaigns
             </Link>
-            <Link className="px-4 text-red-800 hover:text-red-900" href="#stats">
+            <Link
+              className="px-0 lg:px-4 text-red-800 hover:text-red-900"
+              href="#stats"
+            >
               Events
             </Link>
-            <Link className="px-4 text-red-800 hover:text-red-900" href="#testimonials">
+            <Link
+              className="px-0 lg:px-4 text-red-800 hover:text-red-900"
+              href="#testimonials"
+            >
               Media & Partners
             </Link>
           </div>
-          {/* <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
-      </div> */}
         </div>
       </header>
     );

@@ -3,22 +3,22 @@ import PropTypes from "prop-types";
 import Img from "gatsby-image";
 
 const CampaignCardList = ({ campaignItems }) => (
-  <div className="flex justify-start ">
+  <div className="lg:flex justify-start ">
     {campaignItems.map(item => (
-      <div className="w-1/3">
+      <div className="w-full mb-6 lg:mb-0 lg:w-1/3">
         <div className="mx-6 border rounded-lg shadow-md">
-          <div className="">
+          <div className="w-full">
             <Img className="rounded-t" fluid={item.image.childImageSharp.fluid} />
           </div>
-          <h3 className="text-lg font-semibold text-black tracking-wider mt-4 px-4">
+          <h3 className="text-md lg:text-lg font-semibold text-black tracking-wider mt-4 px-4">
             {item.title_text}
           </h3>
-          <p className="text-md mt-2 leading-relaxed font-light text-gray-600 px-4 mb-4">
+          <p className="text-sm lg:text-md mt-2 leading-relaxed font-light text-gray-600 px-4 mb-4">
             {item.subtitle_text}
           </p>
           <div className="flex justify-end p-4">
             <a
-              class="align-right font-bold text-md text-red-700 hover:text-red-800"
+              class="align-right font-bold text-sm lg:text-md text-red-700 hover:text-red-800"
               href="#"
             >
               Learn More
